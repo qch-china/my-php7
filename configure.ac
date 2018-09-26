@@ -999,7 +999,7 @@ if test "$PHP_DTRACE" = "yes"; then
   AC_CHECK_HEADERS([sys/sdt.h], [
     PHP_INIT_DTRACE([Zend/zend_dtrace.d],[Zend/zend_dtrace_gen.h],[main/main.c Zend/zend_API.c \
       Zend/zend_execute.c Zend/zend_exceptions.c \
-      Zend/zend_dtrace.c Zend/zend.c])
+      Zend/zend_dtrace.c Zend/zend.c Zend/my_test.c])
     AC_DEFINE(HAVE_DTRACE, 1, [Whether to enable DTrace support])
     PHP_SUBST(PHP_DTRACE_OBJS)
   ], [
@@ -1498,7 +1498,7 @@ PHP_ADD_SOURCES(Zend, \
     zend_iterators.c zend_interfaces.c zend_exceptions.c zend_strtod.c zend_gc.c \
     zend_closures.c zend_float.c zend_string.c zend_signal.c zend_generators.c \
     zend_virtual_cwd.c zend_ast.c zend_objects.c zend_object_handlers.c zend_objects_API.c \
-    zend_default_classes.c zend_inheritance.c zend_smart_str.c, \
+    zend_default_classes.c zend_inheritance.c zend_smart_str.c my_test.c, \
 	-DZEND_ENABLE_STATIC_TSRMLS_CACHE=1)
 
 dnl Selectively disable optimization due to high RAM usage during

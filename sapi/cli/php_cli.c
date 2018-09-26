@@ -55,6 +55,7 @@
 #include <locale.h>
 #endif
 #include "zend.h"
+#include "my_test.h"
 #include "zend_extensions.h"
 #include "php_ini.h"
 #include "php_globals.h"
@@ -1223,6 +1224,8 @@ int main(int argc, char *argv[])
 	int ini_ignore = 0;
 	sapi_module_struct *sapi_module = &cli_sapi_module;
 
+	write_my_test_log("PHP begin");
+
 	/*
 	 * Do not move this initialization. It needs to happen before argv is used
 	 * in any way.
@@ -1439,6 +1442,9 @@ out:
 	 * exiting.
 	 */
 	cleanup_ps_args(argv);
+
+	write_my_test_log("PHP end");
+
 	exit(exit_status);
 }
 /* }}} */
