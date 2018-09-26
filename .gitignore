@@ -232,3 +232,7 @@ win32/wsyslog.h
 !ext/fileinfo/libmagic.patch
 !ext/mbstring/oniguruma.patch
 
+# ------------------------------------------------------------------------------ MY Test
+.vscode
+my_test/*.php
+my_test/*.log
