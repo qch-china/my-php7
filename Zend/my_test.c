@@ -3,7 +3,7 @@
 #include <stdlib.h>
 #include "my_test.h"
 
-void write_my_test_log(char *content) 
+void my_test_log(char *content) 
 {
     static int init = 0;
     static FILE *fp = NULL;
