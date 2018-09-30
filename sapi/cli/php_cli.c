@@ -1224,7 +1224,7 @@ int main(int argc, char *argv[])
 	int ini_ignore = 0;
 	sapi_module_struct *sapi_module = &cli_sapi_module;
 
-	my_test_log("PHP begin");
+	my_test_log("%s", "PHP begin");
 
 	/*
 	 * Do not move this initialization. It needs to happen before argv is used
@@ -1443,7 +1443,7 @@ out:
 	 */
 	cleanup_ps_args(argv);
 
-	my_test_log("PHP end");
+	my_test_log("%s", "PHP end");
 
 	exit(exit_status);
 }

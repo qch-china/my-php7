@@ -234,5 +234,4 @@ win32/wsyslog.h
 
 # ------------------------------------------------------------------------------ MY Test
 .vscode
-my_test/my_test.php
-my_test/my_test.log
+my_test/my_test.*

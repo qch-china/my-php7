@@ -64994,9 +64994,7 @@ static const void *zend_vm_get_opcode_handler_ex(uint32_t spec, const zend_op* o
 	}
 
 	int opcode_index = (spec & SPEC_START_MASK) + offset;
-	static char message[10240];
-	sprintf(message, "opcode: %s", zend_opcode_handlers_name[opcode_index]);
-	my_test_log(message);
+	my_test_log("opcode: %s", zend_opcode_handlers_name[opcode_index]);
 	return zend_opcode_handlers[opcode_index];
 }
 
