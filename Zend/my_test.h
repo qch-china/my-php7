@@ -15,11 +15,11 @@
 int my_test_log(const char *fmt, ...);
 
 /**
- * 以JSON形式输出zval变量的值，方便GDB调试
- * 使用：在GDB中，对于zval变量val使用 `call my_print_zval(val)`，
- * 即可以JOSN形式输出变量的值
+ * 以var_dump形式输出zval变量的值，方便GDB调试
+ * 使用：在GDB中，对于zval变量val使用 `call my_p_zval(val)`，
+ * 即可以var_dump形式输出变量的值
  */ 
-void my_print_zval(zval *val);
+void my_p_zval(zval *val);
 
 #endif
 

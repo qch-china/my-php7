@@ -49,25 +49,7 @@ int my_test_log(const char *fmt, ...)
 	return len;
 }
 
-void my_print_zval(zval *val)
+void my_p_zval(zval *val)
 {
-    static char buffer[BUFFER_MAX_LEN];
-    php_json_encoder encoder;
-	smart_str sbuf = {0};
-
-    memset(buffer, 0, BUFFER_MAX_LEN);
-    snprintf(buffer, BUFFER_MAX_LEN, "json encode error");
-    php_json_encode_init(&encoder);
-	encoder.max_depth = 512;
-	php_json_encode_zval(&sbuf, val, 0, &encoder);
-
-    if (encoder.error_code == PHP_JSON_ERROR_NONE) {
-		memcpy(buffer, sbuf.s->val, sbuf.s->len);
-	} else {
-        snprintf(buffer, BUFFER_MAX_LEN, "json encode error: %d", encoder.error_code);
-    }
-
-    printf("%s\n", buffer);
-    
-    smart_str_free(&sbuf);
+    php_var_dump(val, 1);
 }
