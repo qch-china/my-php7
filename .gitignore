@@ -42,27 +42,21 @@ bsd_converted
 buildconf.stamp
 buildmk.stamp
 confdefs.h
-config.h
-config.guess
 config.cache
-config.h.in
 config.log
 config.nice
 config.status
-config.sub
 config_vars.mk
 configuration-parser.c
 configuration-parser.h
 configuration-parser.output
 configuration-scanner.c
-configure
 conftest
 conftest.c
 debug.log
 diff
 generated_lists
 include
-install-sh
 internal_functions.c
 lcov_data
 lcov_html
@@ -99,9 +93,7 @@ Zend/zend_language_parser.h
 Zend/zend_language_parser.output
 ext/date/lib/timelib_config.h
 ext/iconv/php_iconv_aliased_libiconv.h
-ext/phar/phar.php
 main/php_config.h
-main/php_config.h.in
 
 # Extension specifc ignores
 ext/*/configure.in
